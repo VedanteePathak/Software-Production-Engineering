@@ -26,7 +26,7 @@ pipeline {
         stage('Push the Docker Image') {
             steps {
                 script{
-                    docker.withRegistry('', 'DockerHubCred') {
+                    docker.withRegistry('', 'docker_hub') {
                     sh 'docker tag "${DOCKER_IMAGE_NAME}" vedanteepathak/calcpython:latest'
                     sh 'docker push vedanteepathak/calcpython'
                     }
