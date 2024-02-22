@@ -2,6 +2,6 @@ FROM python:latest
 
 WORKDIR /src
 
-COPY calculator.py /src/
+COPY calculator.py /src/pycalculator.py
 
-CMD [ "./calculator.py" ]
+CMD [ "./pycalculator.py" ]
